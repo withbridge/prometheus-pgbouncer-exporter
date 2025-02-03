@@ -8,7 +8,7 @@ exporter_port: $(PGBOUNCER_EXPORTER_PORT)
 pgbouncers:
   -
     # The pgbouncer connection string. Supports environment variables replacement
-    dsn: ${STATS_DATABASE_URL}
+    dsn: $(STATS_DATABASE_URL)
 
     # The pgbouncer connection timeout in seconds (defaults to 5 seconds)
     connect_timeout: 5
