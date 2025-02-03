@@ -8,9 +8,7 @@ exporter_port: $(PGBOUNCER_EXPORTER_PORT)
 pgbouncers:
   -
     # The pgbouncer connection string. Supports environment variables replacement
-    # Ie. $(PGBOUNCER_PASS) is replaced with the content of "PGBOUNCER_PASS" environment
-    #     variable if exist, or left untouched if doesn't exist
-    dsn: postgresql://$(PGBOUNCER_USER):$(PGBOUNCER_PASS)@$(PGBOUNCER_HOST):$(PGBOUNCER_PORT)/pgbouncer
+    dsn: ${STATS_DATABASE_URL}
 
     # The pgbouncer connection timeout in seconds (defaults to 5 seconds)
     connect_timeout: 5
