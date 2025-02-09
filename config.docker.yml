@@ -12,3 +12,6 @@ pgbouncers:
 
     # The pgbouncer connection timeout in seconds (defaults to 5 seconds)
     connect_timeout: 5
+
+    extra_labels:
+      stack: $(STACK)
