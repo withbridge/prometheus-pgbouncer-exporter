@@ -8,7 +8,8 @@ RUN apk update && \
 
 ENV PGBOUNCER_EXPORTER_HOST="127.0.0.1" \
     PGBOUNCER_EXPORTER_PORT=9127 \
-    STATS_DATABASE_URL=postgresql://pgbouncer:pgbouncer@localhost:6432/pgbouncer
+    STATS_DATABASE_URL=postgresql://pgbouncer:pgbouncer@localhost:6432/pgbouncer \
+    STACK=${STACK}
 
 EXPOSE 9127
 
